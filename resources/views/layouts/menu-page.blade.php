@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 </head>
 <body class="menu-page">
-    <header class="app-title">Aplikasi Penjualan</header>
     @include('partials.main-menu')
     <div class="store-banner">
         <h1>TOKO JIREH (Wonorejo - Balak)</h1>
