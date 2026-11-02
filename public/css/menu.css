@@ -1,0 +1,124 @@
+:root {
+    --paper: #f4eddd;
+    --paper-light: #fbf7ed;
+    --ink: #3b2a1e;
+    --walnut: #38241a;
+    --brass: #c39a4a;
+    --brass-light: #ead49a;
+    --rule: #d7c6a3;
+}
+
+.menu-bar {
+    display: flex;
+    min-height: 48px;
+    flex: 0 0 48px;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-light);
+    color: #59442e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+}
+
+.menu-link {
+    display: inline-flex;
+    min-width: 76px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.menu-link:hover {
+    border-color: var(--brass);
+    background: #efe2c4;
+    color: var(--walnut);
+}
+
+.menu-link:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+}
+
+.menu-link.is-active {
+    background: #eadbb8;
+    color: var(--walnut);
+}
+
+.menu-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+}
+
+.menu-page {
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.menu-page .app-title {
+    height: 30px;
+    padding: 8px 10px 0;
+    background: var(--paper-light);
+    font-size: 12px;
+}
+
+.menu-page .store-banner {
+    display: grid;
+    min-height: 58px;
+    place-items: center;
+    border-bottom: 3px double var(--brass);
+    background: var(--walnut);
+    color: var(--brass-light);
+}
+
+.menu-page .store-banner h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 2.1vw, 28px);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 1px 2px 0 #21140e;
+}
+
+.menu-page .content {
+    min-height: 320px;
+    padding: 36px;
+}
+
+.menu-page .content h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.menu-page .content p {
+    margin: 0;
+    color: #705b40;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .menu-bar {
+        gap: 0;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+
+    .menu-link {
+        min-width: 0;
+        gap: 5px;
+        padding: 0 8px;
+    }
+}

@@ -1,0 +1,103 @@
+.calendar-widget {
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+    right: 16px;
+    width: min(252px, calc(100% - 32px));
+    color: var(--ink, #3b2a1e);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.calendar-card {
+    padding: 10px;
+    border: 1px solid var(--rule, #d7c6a3);
+    border-radius: 4px;
+    background: var(--paper-light, #fbf7ed);
+    box-shadow: 0 4px 12px rgb(56 36 26 / 12%);
+}
+
+.calendar-heading,
+.calendar-controls,
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-eyebrow {
+    display: none;
+}
+
+.calendar-heading h2 {
+    margin: 0;
+    color: var(--walnut, #38241a);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.calendar-live-indicator {
+    padding: 4px 7px;
+    border-radius: 999px;
+    background: #e8dfc7;
+    color: #6a512e;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.calendar-live-indicator::before {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: #8a6a37;
+    content: "";
+    vertical-align: 1px;
+}
+
+.calendar-digital-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 8px 0 4px;
+    padding: 8px 10px;
+    border: 1px solid var(--rule, #d7c6a3);
+    border-radius: 3px;
+    background: #eee4cf;
+}
+
+.calendar-digital-time {
+    color: #49301e;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 25px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.calendar-digital-date {
+    color: #705b40;
+    font-size: 10px;
+    text-align: right;
+}
+
+@media (max-width: 800px) {
+    .calendar-widget {
+        top: 14px;
+        right: 12px;
+        width: min(252px, calc(100% - 24px));
+    }
+
+    .calendar-card {
+        padding: 10px;
+    }
+}
+
+@media (max-height: 650px) {
+    .calendar-widget {
+        top: 7%;
+    }
+}
