@@ -38,7 +38,7 @@ class ExampleTest extends TestCase
         $pages = [
             'File' => route('menu.file'),
             'Master' => route('menu.master'),
-            'Transaksi' => route('menu.transaksi'),
+            'Modul Kasir' => route('menu.transaksi'),
             'Angsuran' => route('menu.angsuran'),
             'Laporan' => route('menu.laporan'),
             'Pengaturan' => route('menu.pengaturan'),

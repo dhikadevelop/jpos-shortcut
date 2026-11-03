@@ -26,7 +26,7 @@
             <circle cx="10" cy="20" r="1.5" fill="currentColor"/>
             <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
         </svg>
-        <span>Transaksi</span>
+        <span>Modul Kasir</span>
     </a>
     <a class="menu-link{{ request()->routeIs('menu.angsuran') ? ' is-active' : '' }}"
        href="{{ route('menu.angsuran') }}"
